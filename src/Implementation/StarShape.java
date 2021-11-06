@@ -6,6 +6,6 @@ public class StarShape extends Shape {
         this.rectangleContainer = rectangleContainer;
     }
     public void draw(){
-        System.out.println("Pintando una estrella en x: "+rectangleContainer.getTopLeft()+" y color: "+fillColor);  
+        System.out.println("Pintando una estrella de color: "+fillColor);  
     }
 }
