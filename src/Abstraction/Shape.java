@@ -4,9 +4,17 @@ public abstract class Shape {
     protected RectangleContainer rectangleContainer;
     protected String borderColor;
     protected String fillColor;
-    public abstract void setBorderColor(String color);
-    public abstract void setFillColor(String color);
-    public abstract String getBorderColor(float color);
-    public abstract String getFillColor(float color);
-    public abstract void Draw();
+    public void setBorderColor(String color){
+        borderColor = color;
+    }
+    public void setFillColor(String color){
+        fillColor = color;
+    }
+    public String getBorderColor(float color){
+        return borderColor;
+    }
+    public String getFillColor(float color){
+        return fillColor;
+    }
+    public abstract void draw();
 }

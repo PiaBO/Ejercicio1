@@ -1,5 +1,6 @@
 package Implementation;
 import Abstraction.*;
+import java.lang.Math; 
 
 public class RectangleContainerImp implements RectangleContainer{
     private float topLeft;
@@ -7,11 +8,11 @@ public class RectangleContainerImp implements RectangleContainer{
     private float bottomLeft;
     private float bottomRight; 
   
-    private RectangleContainerImp(float topLeft, float topRight, float bottomLeft, float bottomRight){
-        this.topLeft = topLeft;
-        this.topRight = topRight;
-        this.bottomLeft = bottomLeft;
-        this.bottomRight = bottomRight;
+    RectangleContainerImp(){
+        this.topLeft = (float) Math.random()*10;
+        this.topRight = (float) Math.random()*10;
+        this.bottomLeft = (float) Math.random()*10;
+        this.bottomRight = (float) Math.random()*10;
     }
     public float getTopLeft(){
         return topLeft;
