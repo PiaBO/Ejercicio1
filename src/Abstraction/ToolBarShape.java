@@ -1,5 +1,5 @@
 package Abstraction;
 
 public interface ToolBarShape {
-    public Shape createShape(Class<?> shapeType) throws Exception;
+    public void createShape(String type);
 }

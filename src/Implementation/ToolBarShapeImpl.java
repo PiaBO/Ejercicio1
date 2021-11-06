@@ -3,24 +3,20 @@ package Implementation;
 import Abstraction.Publisher;
 import Abstraction.Shape;
 import Abstraction.ShapeFactory;
+import Abstraction.ShapePublisher;
 import Abstraction.ToolBarShape;
 
-public class ToolBarShapeImpl implements ToolBarShape{
+public class ToolBarShapeImpl implements ToolBarShape, ShapePublisher{
     private Publisher publisher;
     private ShapeFactory factory;
     private PubSubService pubSubService;
 
-    public ToolBarShapeImpl(){
-        factory = new ShapeFactoryImpl();
-        publisher = new PublisherIm    
+    public void createShape(String type){
+        Message shapeMessage = new Message("Create shape",type);
+        publisher.emit(shapeMessage, pubSubService);
     }
-    public Shape createShape(Class<?> shapeType) throws Exception{
-        Shape shape = factory.createShape(shapeType);
-        if(shape != null){
-            return shape;
-        }else{
-            throw new Exception("Tipo no válido");
-        }
-
+    public void becomePublisher(PubSubService pubSubService){
+        publisher = new PublisherImpl(); 
+        this.pubSubService = pubSubService;  
     }
 }

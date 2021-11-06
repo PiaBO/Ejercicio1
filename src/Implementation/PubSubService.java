@@ -1,4 +1,4 @@
-package pubsub;
+package Implementation;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
+
+import Abstraction.Subscriber;
 
 public class PubSubService {
     Map<String, Set<Subscriber>> subscribersChannels = new HashMap<String, Set<Subscriber>>();

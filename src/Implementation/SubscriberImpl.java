@@ -1,4 +1,5 @@
-package pubsub;
+package Implementation;
+import Abstraction.Subscriber;
 
 public class SubscriberImpl extends Subscriber{
     public void subscribe(String message, PubSubService pubSubService){

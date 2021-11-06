@@ -1,6 +1,9 @@
-package pubsub;
+package Abstraction;
 import java.util.ArrayList;
 import java.util.List;
+
+import Implementation.Message;
+import Implementation.PubSubService;
 
 public abstract class Subscriber {
     private List<Message> subscriberMessages = new ArrayList<>();
