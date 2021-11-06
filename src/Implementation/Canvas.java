@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender{
     private ArrayList<Shape> shapes;
     private Shape selected;
+    private Subscriber subscriber;
 
     public Canvas(){
         shapes = new ArrayList<>();
@@ -24,5 +25,8 @@ public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender{
         for (Shape shape : shapes) {
             shape.draw();
         }
+    }
+    public void subscribe(Publisher publisher){
+        publisher.addSubscriber(subscriber);
     }
 }
