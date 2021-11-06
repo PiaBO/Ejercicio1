@@ -6,7 +6,7 @@ public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender{
     private ArrayList<Shape> shapes;
     private Shape selected;
 
-    Canvas(){
+    public Canvas(){
         shapes = new ArrayList<>();
     }
     public void addShape(Shape shape){

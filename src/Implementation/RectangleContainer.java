@@ -8,7 +8,7 @@ public class RectangleContainer implements RectangleContainerGetter{
     private float height;
     private float width; 
   
-    RectangleContainer(){
+    public RectangleContainer(){
         this.x = (float) Math.random()*10;
         this.y = (float) Math.random()*10;
         this.height = (float) Math.random()*10;

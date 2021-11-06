@@ -2,7 +2,7 @@ import Abstraction.*;
 import Implementation.*;
 
 public class Main{
-    public static void main (String [ ] args) {
+    public static void main (String [ ] args) throws Exception {
         ShapeFactory factory = new ShapeFactory();
         Shape corazon = factory.createShape(HeartShape.class);
         Shape estrella = factory.createShape(StarShape.class);
