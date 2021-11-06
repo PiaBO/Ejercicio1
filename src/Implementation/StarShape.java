@@ -1,5 +1,5 @@
 package Implementation;
-import Abstraction.*;
+import Abstraction.Shape;
 
 public class StarShape extends Shape {
     public StarShape(RectangleContainer rectangleContainer){

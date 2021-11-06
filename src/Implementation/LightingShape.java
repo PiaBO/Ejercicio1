@@ -1,5 +1,5 @@
 package Implementation;
-import Abstraction.*;
+import Abstraction.Shape;
 
 public class LightingShape extends Shape {
     public LightingShape(RectangleContainer rectangleContainer){

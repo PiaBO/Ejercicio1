@@ -7,5 +7,4 @@ public class SubscriberImpl extends Subscriber{
     public void unsubscribe(String message, PubSubService pubSubService){
         pubSubService.removeSubscriber(message, this);
     }
-
 }

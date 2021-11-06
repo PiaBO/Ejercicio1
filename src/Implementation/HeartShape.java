@@ -1,5 +1,5 @@
 package Implementation;
-import Abstraction.*;
+import Abstraction.Shape;
 
 public class HeartShape extends Shape{
     public HeartShape(RectangleContainer rectangleContainer){
