@@ -8,9 +8,11 @@ import Abstraction.ToolBarShape;
 
 public class ToolBarShapeImpl implements ToolBarShape, ShapePublisher{
     private Publisher publisher;
-    private ShapeFactory factory;
     private PubSubService pubSubService;
 
+    public ToolBarShapeImpl(PubSubService pubSubService){
+        this.pubSubService = pubSubService;
+    }
     public void createShape(String type){
         Message shapeMessage = new Message("Create shape",type);
         publisher.emit(shapeMessage, pubSubService);

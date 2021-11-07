@@ -12,6 +12,7 @@ import Abstraction.Subscriber;
 public class PubSubService {
     Map<String, Set<Subscriber>> subscribersChannels = new HashMap<String, Set<Subscriber>>();
     Queue<Message> messagesQueue = new LinkedList<Message>();
+    
     public void queueMessage(Message message){
         messagesQueue.add(message);
     }
