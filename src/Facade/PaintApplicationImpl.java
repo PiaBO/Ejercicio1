@@ -1,11 +1,10 @@
 package Facade;
-
-import Abstraction.ToolBarColors;
-import Abstraction.ToolBarShape;
-import Implementation.Canvas;
-import Implementation.PubSubService;
-import Implementation.ToolBarColorsImpl;
-import Implementation.ToolBarShapeImpl;
+import Canvas.Canvas;
+import PubSub.PubSubService;
+import ToolBarColors.*;
+import ToolBarColors.Inerfaces.*;
+import ToolBarShape.ToolBarShapeImpl;
+import ToolBarShape.Interfaces.ToolBarShape;
 
 public class PaintApplicationImpl implements PaintApplication{
     private ToolBarColors toolBarColors;
@@ -36,4 +35,7 @@ public class PaintApplicationImpl implements PaintApplication{
         toolBarColors.selectFillColor(color);
         canvas.checkMessages();
     }   
+    public void draw(){
+        canvas.render();
+    }
 }

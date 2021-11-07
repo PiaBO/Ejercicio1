@@ -1,10 +1,8 @@
 package Data;
-
 import java.util.HashMap;
-
-import Implementation.HeartShape;
-import Implementation.LightingShape;
-import Implementation.StarShape;
+import Shapes.HeartShape;
+import Shapes.LightingShape;
+import Shapes.StarShape;
 
 public final class ShapeTypes {
     public static final String STAR_SHAPE_TYPE = "Estrella";

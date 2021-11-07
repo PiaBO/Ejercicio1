@@ -5,4 +5,5 @@ public interface PaintApplication {
     public void selectShapeIn(int coordX, int coordY);
     public void borderColor(String color);
     public void fillColor(String color);
+    public void draw();
 }
