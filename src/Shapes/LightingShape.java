@@ -6,6 +6,5 @@ public class LightingShape extends Shape {
     }
     public void draw(){
         System.out.println("Pintando un rayode color: "+fillColor);  
-    }
-  
+    } 
 }
