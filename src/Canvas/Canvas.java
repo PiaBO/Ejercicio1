@@ -8,7 +8,7 @@ import PubSub.*;
 import PubSub.Subscriber.Subscriber;
 import PubSub.Subscriber.SubscriberImpl;
 
-public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender, CanvasSubcriptions{
+public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender, CanvasSubscriber, CanvasMessagesControl{
     private ArrayList<Shape> shapes;
     private Shape selected;
     private ArrayList<Subscriber> subscriptions;
@@ -18,6 +18,10 @@ public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender, CanvasSub
         shapes = new ArrayList<>();
         subscriptions = new ArrayList<>();
         this.pubSubService = pubSubService;
+        subscribe(Channels.BORDER_COLOR);
+        subscribe(Channels.FILL_COLOR);
+        subscribe(Channels.CREATE_SHAPE);
+
     }
     public void addShape(Shape shape){
         shapes.add(shape);
@@ -72,7 +76,8 @@ public class Canvas implements CanvasAdd, CanvasPointer, CanvasRender, CanvasSub
         }else if(message.getChannel().equals(Channels.CREATE_SHAPE)){
             System.out.println("Mensaje por el canal: "+Channels.CREATE_SHAPE+" recibido.");
             ShapeFactory factory = new ShapeFactoryImpl();
-            factory.createShape(ShapeTypes.getShapeClass(message.getMessage()));
+            Shape shape = factory.createShape(ShapeTypes.getShapeClass(message.getMessage()));
+            addShape(shape);
         }
     }
 }

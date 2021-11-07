@@ -26,12 +26,16 @@ public class ToolBarColorsImpl implements ToolBarColors, ColorPublisher{
     public void selectFillColor(String color){
         this.fillColor = color;
         Message colorMessage = new Message(Channels.FILL_COLOR,fillColor);
+        System.out.println("Publicando mensaje desde la ToolBarColor");
         publisher.emit(colorMessage, pubSubService);
+        pubSubService.emit();
     }
     public void selectBorderColor(String color) {
         this.borderColor = color;
         Message colorMessage = new Message(Channels.BORDER_COLOR,borderColor);
+        System.out.println("Publicando mensaje desde la ToolBarColor");
         publisher.emit(colorMessage, pubSubService);
+        pubSubService.emit();
     }
     public String getBorderColor(){
         return borderColor;

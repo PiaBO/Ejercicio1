@@ -1,4 +1,5 @@
 package ToolBarShape;
+import Data.Channels;
 import PubSub.Message;
 import PubSub.PubSubService;
 import PubSub.Publisher.Publisher;
@@ -16,7 +17,7 @@ public class ToolBarShapeImpl implements ToolBarShape, ToolBarShapePublisher{
     }
     public void createShape(String type){
         System.out.println("Publicando mensaje desde la ToolBarShape");
-        Message shapeMessage = new Message("Create shape",type);
+        Message shapeMessage = new Message(Channels.CREATE_SHAPE,type);
         publisher.emit(shapeMessage, pubSubService);
     }
     public void becomePublisher(PubSubService pubSubService){

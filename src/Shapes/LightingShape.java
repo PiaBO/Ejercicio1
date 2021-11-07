@@ -5,7 +5,7 @@ public class LightingShape extends Shape {
         this.rectangleContainer = rectangleContainer;
     }
     public void draw(){
-        System.out.println("Pintando un rayo");
+        System.out.println("Pintando un rayode color: "+fillColor);  
     }
   
 }

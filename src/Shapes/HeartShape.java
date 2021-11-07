@@ -5,6 +5,6 @@ public class HeartShape extends Shape{
         this.rectangleContainer = rectangleContainer;
     }
     public void draw(){
-        System.out.println("Pintando un corazón");
+        System.out.println("Pintando un corazón de color: "+fillColor);  
     }
 }    
