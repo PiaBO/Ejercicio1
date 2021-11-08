@@ -1,5 +1,6 @@
 package Shapes;
-
+// no haria falta la interfaz poruqe es un DTO
+// se podria hacer los atributos publicos y no poner los getter
 public class RectangleContainer implements RectangleContainerGetter{
     private float x;
     private float y; 

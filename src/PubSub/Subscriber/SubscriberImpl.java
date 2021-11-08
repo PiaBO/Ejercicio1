@@ -15,6 +15,8 @@ public class SubscriberImpl implements Subscriber{
 	}
     public void subscribe(String channel, PubSubService pubSubService){
         pubSubService.addSubscriber(channel, this);
+        // TODO: hacer que lo devuelva por parametro asi lo tiene la clase que lo usa
+        // y lo puede utilizar sin necesidad de llamar a esta
         unsubscribe = ()->{pubSubService.removeSubscriber(channel, this);};
     }
     public void unsubscribe(){
